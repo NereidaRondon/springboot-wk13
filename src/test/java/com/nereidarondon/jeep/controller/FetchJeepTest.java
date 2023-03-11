@@ -55,7 +55,8 @@ class FetchJeepTest{
     //System.out.println(uri);
     
     //When: a connection is made to the URI
-    ResponseEntity<List<Jeep>> response = restTemplate.exchange(uri, HttpMethod.GET, null, new ParameterizedTypeReference<>() {});
+    ResponseEntity<List<Jeep>> response = restTemplate.exchange(uri, HttpMethod.GET, null, 
+        new ParameterizedTypeReference<>() {});
     
     //Then: a success (OK- 200) status code is returned OR a list of jeeps is returned 
     //AssertProvider<T> component
@@ -64,5 +65,8 @@ class FetchJeepTest{
      * expected:200 OK but was: 404 NOT_FOUND
      */
   }
-  
+ 
+   
 }
+
+
